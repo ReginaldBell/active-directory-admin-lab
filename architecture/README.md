@@ -138,8 +138,8 @@ Domain Admins
 ```powershell
 # Common administrative tasks
 Get-ADUser -Filter * -Properties *
-New-ADUser -Name "John Doe" -SamAccountName "jdoe"
-New-GPO -Name "Security Baseline" | New-GPLink -Target "DC=lab,DC=local"
+New-ADUser -Name "Example User" -SamAccountName "example.user"
+New-GPO -Name "Security Baseline"
 ```
 
 ### Remote Management Tools
@@ -173,6 +173,6 @@ New-GPO -Name "Security Baseline" | New-GPLink -Target "DC=lab,DC=local"
 ---
 
 **Last Updated:** December 2024  
-**Maintained By:** [Your Name]  
+**Maintained By:** [Reginald Bell]  
 **Lab Environment:** Oracle VirtualBox 7.0+ | Windows Server 2019 | Window
 
