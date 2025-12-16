@@ -1,47 +1,94 @@
-# Active Directory Administration Lab
-Windows Active Directory homelab focused on administration, security hardening, and operational ownership.
+Active Directory Administration Lab
+Enterprise-focused Windows Active Directory homelab demonstrating administration, security hardening, and operational management.
+Overview
+This project simulates enterprise identity and access management (IAM) operations through hands-on administration of a Windows Active Directory environment. The focus emphasizes operational ownership, security best practices, and day-to-day administrative tasks rather than one-time deployment.
+Lab Architecture
+Core Infrastructure:
 
+Windows Server 2019 Domain Controller
+Active Directory Domain Services (AD DS)
+Integrated DNS Services
+Domain-joined Windows 10/11 workstations
+Isolated virtual network environment
 
-## Overview
-This project documents the design, administration, and security hardening of a
-Windows Active Directory lab environment built to simulate enterprise identity
-and access management (IAM) operations.
+Administrative Operations
+Identity & Access Management:
 
-The primary focus is ongoing administration, monitoring, and operational
-ownership rather than initial deployment alone.
+User account provisioning and deprovisioning
+Security and distribution group management
+Organizational Unit (OU) structure maintenance
+Permission delegation and role-based access control
 
-## Environment
-- Windows Server 2019 (Domain Controller)
-- Active Directory Domain Services (AD DS)
-- DNS
-- Domain-joined Windows workstations
-- Isolated lab network
+Policy & Configuration:
 
-## Administration Scope
-- User and group lifecycle management
-- Group Policy administration
-- DNS configuration and validation
-- Domain controller health monitoring
-- Change documentation and operational procedures
+Group Policy Object (GPO) creation and enforcement
+DNS record management and zone configuration
+Domain controller health monitoring and maintenance
+Change management documentation
 
-## Security Controls
-- Least privilege via group-based access
-- Separation of administrative roles
-- Account lockout and password policies
-- Security-focused Group Policy enforcement
-- Administrative activity logging
+Security Hardening
+Access Controls:
 
-## Monitoring & Operations
-- Authentication success and failure monitoring
-- Account lockout tracking
-- Policy change awareness
-- Routine administrative validation checks
+Principle of least privilege enforcement
+Role-based administration with tiered access
+Protected Users group implementation
+Service account isolation
 
-## Backup & Recovery Considerations
-- Domain controller system state backup planning
-- AD and DNS recovery considerations
-- Documentation of restore procedures
+Policy Enforcement:
 
-## Documentation Philosophy
-Sensitive infrastructure details are intentionally omitted.
-This repository serves as an administrative reference and operational runbook.
+Account lockout thresholds (5 failed attempts, 30-minute lockout)
+Password complexity requirements (14+ characters, complexity enabled)
+Kerberos policy configuration
+Audit policy for security events
+
+Logging & Visibility:
+
+Authentication event tracking (Event IDs 4624, 4625, 4740)
+Privileged access monitoring
+GPO modification alerts
+Failed logon analysis
+
+Operational Monitoring
+Health Checks:
+
+Domain controller replication status
+DNS resolution validation
+SYSVOL and NETLOGON share integrity
+Time synchronization verification
+
+Security Events:
+
+Real-time account lockout detection
+Unauthorized access attempts
+Group Policy changes
+Administrative group modifications
+
+Business Continuity
+Backup Strategy:
+
+System State backups (daily schedule)
+Active Directory database (NTDS.dit) protection
+SYSVOL replication verification
+GPO backup and version control
+
+Recovery Procedures:
+
+Authoritative and non-authoritative restore processes
+DNS zone recovery from AD-integrated zones
+Domain controller rebuild documentation
+Disaster recovery runbook
+
+Skills Demonstrated
+
+Windows Server administration
+Active Directory architecture and operations
+Group Policy design and troubleshooting
+PowerShell scripting for automation
+Security event log analysis
+Incident response procedures
+Technical documentation
+
+Documentation Standards
+Infrastructure-specific details (IP addresses, domain names, credentials) are excluded for security. This repository functions as a procedural guide and administrative reference for AD operations.
+
+Future Enhancements: Certificate Services (AD CS), LDAPS implementation, Red/Blue team exercises, SIEM integration
