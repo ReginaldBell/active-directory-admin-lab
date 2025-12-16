@@ -8,12 +8,18 @@ This project simulates enterprise identity and access management (IAM) operation
 
 ## 🏗️ Lab Architecture
 
+### Virtualization Platform
+- **Hypervisor:** Oracle VirtualBox
+- **Network Configuration:** Internal network for VM-to-VM communication
+- **Topology:** Domain controller with domain-joined client workstation
+
 ### Core Infrastructure
-- **Windows Server 2019** - Domain Controller
-- **Active Directory Domain Services (AD DS)** - Identity management
-- **Integrated DNS Services** - Name resolution
-- **Windows 10/11 Workstations** - Domain-joined clients
-- **Isolated Virtual Network** - Secure lab environment
+- **Windows Server 2019 (VM)** - Domain Controller
+  - Active Directory Domain Services (AD DS)
+  - Integrated DNS Services
+  - DHCP Services
+- **Windows 10 (VM)** - Domain-joined client workstation
+- **Virtual Network** - Isolated internal network for secure lab environment
 
 ## 🔧 Administrative Operations
 
